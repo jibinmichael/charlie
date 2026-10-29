@@ -1,0 +1,132 @@
+/* State of Hiring — print broadsheet, scoped under .soh. One accent (#c8502a), everything else grayscale, square corners, no shadows. */
+.soh{
+  --ink:#161616; --sub:#4d4d4d; --muted:#8c8c8c; --hair:#dcdcdc; --rule:#161616;
+  --bar-1:#3a3a3a; --bar-2:#8f8f8f; --bar-3:#c9c9c9; --track:#eeeeee;
+  --accent:#c8502a; --accent-dk:#a63e1d;
+  /* The whole report is set in the site's one font (Courier Prime mono, via --mono). It used to
+     mix Source Serif 4 + Sanchez + Libre Franklin; now every rule references var(--mono). */
+  font-family:var(--mono); color:var(--ink); background:#fff; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.soh *{margin:0;padding:0;box-sizing:border-box}
+.soh .page{max-width:820px;margin:0 auto;padding:56px 24px 88px}
+
+.soh .masthead{border-bottom:1px solid var(--ink);padding-bottom:10px;display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono)}
+.soh .masthead .brand{font-weight:800;font-size:15px;letter-spacing:.02em}
+.soh .masthead .date{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.soh h1{font-weight:700;font-size:46px;line-height:1.1;margin:30px 0 18px;letter-spacing:-.012em}
+.soh h1 em{font-style:italic}
+.soh .dek{font-size:19px;line-height:1.55;color:var(--sub);max-width:600px}
+.soh .dek b{color:var(--ink);font-weight:600}
+.soh .stamp{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums;font-size:12px;color:var(--muted);margin-top:22px;padding-top:12px;border-top:1px solid var(--hair)}
+.soh .stamp b{color:var(--ink)}
+.soh .stamp span{margin-right:16px}
+
+.soh section{margin-top:80px}
+.soh .graphic{border-top:1px solid var(--hair);padding-top:16px}
+.soh .g-kicker{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.soh h2{font-family:var(--mono);font-weight:600;font-size:24px;line-height:1.22;margin-bottom:8px;letter-spacing:-.01em;max-width:30ch;text-wrap:balance}
+.soh .g-sub{font-family:var(--mono);font-weight:500;font-size:13.5px;color:var(--sub);margin-bottom:24px;max-width:50ch}
+.soh .source{font-family:var(--mono);font-weight:500;font-size:11.5px;color:var(--muted);margin-top:18px}
+.soh .takeaway{font-size:15.5px;font-style:italic;color:var(--sub);margin-top:14px}
+.soh .takeaway b{font-style:normal;font-weight:700;color:var(--ink)}
+.soh .takeaway b.a{color:var(--accent-dk)}
+.soh .annot{font-family:var(--mono);font-weight:500;font-size:13px;line-height:1.5;margin-top:14px}
+.soh .annot b{font-weight:700;color:var(--accent-dk)}
+.soh .annot span{color:var(--sub)}
+
+.soh .big-lock{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap}
+.soh .big-lock .left{min-width:210px;flex:1}
+.soh .bignum{font-size:58px;font-weight:700;line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums lining-nums;color:var(--accent);margin-bottom:8px}
+.soh .bigsub{font-size:17px;line-height:1.4;margin-bottom:10px}
+.soh .bigsupport{font-family:var(--mono);font-weight:500;font-size:13.5px;line-height:1.55;color:var(--sub)}
+
+.soh .waffle{display:grid;grid-template-columns:repeat(10,15px);gap:3px;flex-shrink:0}
+.soh .waffle i{width:15px;height:15px;display:block}
+.soh .w-cap{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:8px}
+.soh .legend{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-weight:500;font-size:12.5px;color:var(--sub);margin-top:14px}
+.soh .legend span{display:flex;align-items:center;gap:6px}
+.soh .legend i{width:10px;height:10px;display:inline-block}
+.soh .legend b{font-weight:700;color:var(--ink)}
+
+.soh .index{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.soh .index .cell{padding:18px 16px 20px;border-right:1px solid var(--hair)}
+.soh .index .cell:last-child{border-right:none}
+.soh .index .num{font-size:32px;font-weight:700;font-variant-numeric:tabular-nums lining-nums;margin-bottom:6px}
+.soh .index .num.a{color:var(--accent)}
+.soh .index p.d{font-family:var(--mono);font-weight:500;font-size:12.5px;line-height:1.45;color:var(--sub)}
+.soh .index p.d b{color:var(--ink);font-weight:600}
+
+.soh .rows{display:flex;flex-direction:column;gap:8px;font-family:var(--mono)}
+.soh .row{display:grid;grid-template-columns:160px 1fr 52px;align-items:center;gap:12px}
+.soh .row .lbl{font-size:13px;text-align:right}
+.soh .row .track{height:17px;background:var(--track);position:relative}
+.soh .row .fill{height:100%;background:var(--bar-2)}
+.soh .row .val{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--sub)}
+.soh .row.dark .fill{background:var(--bar-1)}
+.soh .row.a .fill{background:var(--accent)}
+.soh .row.a .lbl,.soh .row.a .val{font-weight:700;color:var(--accent-dk)}
+
+/* remote vs in-person split bar */
+.soh .splitbar{display:flex;width:100%;height:46px;gap:2px;margin-top:2px;font-family:var(--mono)}
+.soh .splitbar .seg{display:flex;align-items:center;padding:0 14px;color:#fff;font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden}
+.soh .splitbar .seg.a{background:var(--accent)}
+.soh .splitbar .seg.g{background:var(--bar-2)}
+@media(max-width:480px){.soh .splitbar .seg{font-size:11px;padding:0 9px}}
+
+.soh .scatter{position:relative;height:330px;border-left:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:40px 0 8px}
+.soh .gridline{position:absolute;left:0;right:0;height:1px;background:var(--track)}
+.soh .squeeze{position:absolute;right:0;top:0;width:33%;height:56%;background:rgba(200,80,42,.06);border-left:1px dashed var(--accent);border-bottom:1px dashed var(--accent)}
+.soh .squeeze-lbl{position:absolute;right:0;top:-22px;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--accent-dk)}
+.soh .dot{position:absolute;transform:translate(-50%,-50%);font-family:var(--mono)}
+.soh .dot i{display:block;border-radius:50%;background:#fff;border:2px solid var(--ink);margin:0 auto}
+.soh .dot.in i{border-color:var(--accent);background:rgba(200,80,42,.1)}
+.soh .dot span{display:block;font-size:11.5px;margin-top:4px;white-space:nowrap;text-align:center}
+.soh .dot.in span{font-weight:700;color:var(--accent-dk)}
+.soh .ax{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.soh .ax.x{text-align:right;margin-top:8px}
+.soh .ax.y{position:absolute;left:-12px;top:50%;transform:rotate(-90deg) translateX(50%);transform-origin:left;white-space:nowrap}
+
+.soh .pills{display:flex;flex-wrap:wrap;border:1px solid var(--hair);margin-bottom:22px;font-family:var(--mono)}
+.soh .pill{font-size:12.5px;padding:8px 14px;border-right:1px solid var(--hair);color:var(--sub);background:#fff;cursor:pointer}
+.soh .pill:last-child{border-right:none}
+.soh .pill.on{background:var(--ink);color:#fff;font-weight:700}
+.soh .role-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
+.soh .role-name{font-size:22px;font-weight:700;margin-bottom:2px;font-family:var(--mono)}
+.soh .role-count{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--muted);margin-bottom:16px}
+.soh .mh{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:16px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--hair)}
+.soh .rows.sm .row{grid-template-columns:104px 1fr 42px}
+.soh .rows.sm .row .track{height:13px}
+.soh .rstat{margin-bottom:18px;border-bottom:1px solid var(--hair);padding-bottom:18px}
+.soh .rstat.last{border-bottom:none;padding-bottom:0}
+.soh .rstat .k{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.soh .rstat .v{font-family:var(--mono);font-size:16px;line-height:1.4}
+.soh .rstat .v b{font-weight:700}
+.soh .rstat .v b.a{color:var(--accent-dk)}
+.soh .rstat .v span{color:var(--sub)}
+
+.soh .rows.count .row{grid-template-columns:200px 1fr 44px}
+.soh .zero{margin-top:28px;border-top:1px solid var(--hair);padding-top:22px;display:flex;gap:24px;align-items:center}
+.soh .zero .n{font-size:72px;font-weight:700;line-height:1;color:var(--accent)}
+.soh .zero p{font-size:15px;line-height:1.5;max-width:420px}
+.soh .zero p b{font-weight:700;color:var(--accent-dk)}
+.soh .zero p span{color:var(--sub)}
+
+.soh .cta{margin-top:80px;background:#f5f4f1;padding:40px 44px;text-align:left}
+.soh .cta h2{font-family:var(--mono);font-size:30px;line-height:1.2;font-weight:700;margin-bottom:0}
+.soh .cta p{font-size:16.5px;color:var(--sub);max-width:540px;margin:12px 0 22px}
+.soh .btn{display:inline-block;font-family:var(--mono);font-size:14.5px;font-weight:700;background:var(--ink);color:#fff;padding:13px 26px;text-decoration:none}
+.soh .method{margin-top:60px;border-top:1px solid var(--hair);padding-top:14px;font-family:var(--mono);font-size:12px;line-height:1.65;color:var(--muted)}
+.soh .method b{color:var(--sub)}
+.soh footer{margin-top:36px;border-top:1px solid var(--hair);padding-top:12px;font-family:var(--mono);font-weight:500;font-size:12px;color:var(--muted)}
+.soh footer b{color:var(--ink)}
+
+@media(max-width:600px){
+  .soh .role-grid{grid-template-columns:1fr;gap:22px}
+}
+@media(max-width:480px){
+  .soh h1{font-size:34px}
+  .soh .row{grid-template-columns:110px 1fr 46px}
+  .soh .rows.count .row{grid-template-columns:150px 1fr 40px}
+  .soh .waffle{grid-template-columns:repeat(10,12px)}
+  .soh .waffle i{width:12px;height:12px}
+}

@@ -1,0 +1,13 @@
+{
+  "surface": "interrogate",
+  "label": "adversarial",
+  "note": "A planted invented metric (40k merchants) and an upgraded scope (rearchitected the whole platform) appear in the writeback but NOT in the source. writebackIsGrounded must flag them (grounded=false).",
+  "source": "I led the payments rewrite at Acme and it cut checkout errors by 30 percent.",
+  "dossier": {
+    "proof_points": [
+      { "claim": "led the payments rewrite at Acme", "evidence": "led the payments rewrite at Acme, cut checkout errors by 30 percent", "source": "conversation" },
+      { "claim": "payments used by 40000 merchants", "evidence": "shipped payments used by 40000 merchants", "source": "conversation" }
+    ]
+  },
+  "expectGrounded": false
+}

@@ -1,0 +1,13 @@
+{
+  "surface": "interrogate",
+  "label": "clean",
+  "note": "Every conversation-tier claim written back traces to the person's own answer. writebackIsGrounded must return grounded=true.",
+  "source": "I led the payments rewrite at Acme and it cut checkout errors by 30 percent. I also mentored two junior engineers.",
+  "dossier": {
+    "proof_points": [
+      { "claim": "led the payments rewrite at Acme", "evidence": "led the payments rewrite at Acme, cut checkout errors by 30 percent", "source": "conversation" },
+      { "claim": "mentored two junior engineers", "evidence": "mentored two junior engineers", "source": "conversation" }
+    ]
+  },
+  "expectGrounded": true
+}

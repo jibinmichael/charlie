@@ -1,0 +1,25 @@
+{
+  "surface": "dossier",
+  "label": "adversarial",
+  "note": "schema-valid but ungrounded: invents an employer (Google) and upgrades a soft verb to inflated scope. The live eval (verifyGrounding) must flag it; schema/voice checks still pass because those are shape/voice, not truth.",
+  "expectName": "Maya Okonkwo",
+  "source": "Maya Okonkwo. Product designer. Built the onboarding redesign at Trellis.",
+  "artifact": {
+    "name": "Maya Okonkwo",
+    "headline": "Senior product designer",
+    "narrative": "Maya led design at Google and scaled the design system across 12 teams.",
+    "proof_points": [{ "claim": "led design at Google", "evidence": "resume", "source": "resume" }],
+    "case_studies": [],
+    "strengths": [],
+    "gaps": [],
+    "preferences": {
+      "role": null, "seniority": null, "stage": null, "remote": null,
+      "comp_floor": null, "comp_currency": null, "tech": null, "values": null,
+      "dealbreakers": null, "ping_bar": null
+    }
+  },
+  "violations": [
+    { "claim": "led design at Google", "issue": "invented employer" },
+    { "claim": "scaled the design system across 12 teams", "issue": "invented scope" }
+  ]
+}

@@ -1,0 +1,59 @@
+<svg width="620" height="540" viewBox="0 0 620 540" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Roboto, Arial, sans-serif">
+  <defs>
+    <filter id="cardShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#15171C" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- card -->
+  <rect x="1" y="1" width="618" height="538" rx="12" fill="#FFFFFF" stroke="#E8EAED" stroke-width="1" filter="url(#cardShadow)"/>
+
+  <!-- subject + Inbox label -->
+  <text x="32" y="52" font-size="19" fill="#202124">Senior Product Designer at Loop, worth your time</text>
+  <rect x="516" y="36" width="60" height="22" rx="4" fill="#F1F3F4"/>
+  <text x="546" y="51" font-size="11.5" fill="#5F6368" text-anchor="middle">Inbox</text>
+
+  <!-- sender row -->
+  <circle cx="52" cy="100" r="20" fill="#F75858"/>
+  <text x="52" y="107" font-size="18" font-weight="500" fill="#FFFFFF" text-anchor="middle">C</text>
+  <text x="84" y="95" font-size="14" font-weight="700" fill="#202124">Charlie <tspan font-weight="400" fill="#5F6368">&lt;charlie@example.com&gt;</tspan></text>
+  <text x="84" y="114" font-size="12.5" fill="#5F6368">to me &#9662;</text>
+  <text x="502" y="90" font-size="12.5" fill="#5F6368" text-anchor="end">6:02 AM (2 hours ago)</text>
+  <!-- star -->
+  <g transform="translate(516,92) scale(0.83)" fill="#5F6368">
+    <path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
+  </g>
+  <!-- reply -->
+  <g transform="translate(548,92) scale(0.83)" fill="#5F6368">
+    <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
+  </g>
+
+  <!-- body -->
+  <g fill="#202124" font-size="14">
+    <text x="32" y="160">Hi, one role cleared your bar today.</text>
+    <text x="32" y="192" font-size="15" font-weight="700">Senior Product Designer at Loop</text>
+    <text x="32" y="214">Remote &#183; $140k&#8211;$180k &#183; <tspan fill="#188038" font-weight="500">82/100, strong match</tspan></text>
+    <text x="32" y="248">Why it&#8217;s you: you want to own design end to end and stay</text>
+    <text x="32" y="270">close to the founders. This role is built around exactly that.</text>
+    <text x="32" y="304"><tspan font-weight="700">One honest flag:</tspan> it&#8217;s a little further along than the</text>
+    <text x="32" y="326">early stage you wanted. Worth knowing before you spend your time.</text>
+    <text x="32" y="360">I&#8217;ve tailored your resume and cover letter for this one, both</text>
+    <text x="32" y="382">attached and ready to send.</text>
+    <text x="32" y="418" fill="#1A73E8" font-weight="500">See your honest case for this role &#8594;</text>
+  </g>
+
+  <!-- attachments -->
+  <g>
+    <rect x="32" y="450" width="228" height="52" rx="8" fill="#FFFFFF" stroke="#DADCE0"/>
+    <rect x="44" y="461" width="30" height="30" rx="4" fill="#D93025"/>
+    <text x="59" y="480" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">PDF</text>
+    <text x="86" y="475" font-size="13" font-weight="500" fill="#202124">resume-loop.pdf</text>
+    <text x="86" y="492" font-size="11" fill="#5F6368">84 KB</text>
+
+    <rect x="272" y="450" width="248" height="52" rx="8" fill="#FFFFFF" stroke="#DADCE0"/>
+    <rect x="284" y="461" width="30" height="30" rx="4" fill="#D93025"/>
+    <text x="299" y="480" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">PDF</text>
+    <text x="326" y="475" font-size="13" font-weight="500" fill="#202124">cover-letter-loop.pdf</text>
+    <text x="326" y="492" font-size="11" fill="#5F6368">61 KB</text>
+  </g>
+</svg>

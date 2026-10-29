@@ -1,0 +1,6 @@
+# .railwayignore — what `railway up` must never upload: local agent state and git worktrees
+# (.claude/worktrees/ holds full repo copies).
+tsconfig.tsbuildinfo
+.claude/
+node_modules/
+.git/

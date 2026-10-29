@@ -1,0 +1,23 @@
+{
+  "name": "restarter",
+  "description": "Asks to start the first item over, then answers well. The restart resets that item only; the rest runs like strong_specific.",
+  "turns": [
+    { "say": "Sure." },
+    { "say": "Wait, sorry, can I start over? I lost my thread." },
+    { "say": "At Acme I repair rooftop HVAC units for commercial sites. Since March 2023, about twelve call-outs a week, all logged in the CMMS.", "hint": { "present": ["context", "dates", "specific_experience"] } },
+    { "say": "March 2023, and it's still most of my week.", "hint": { "present": ["context", "dates", "specific_experience"] } },
+    { "say": "Last month I traced a compressor trip across 6 rooftop units from scratch with the CMMS history and a leak detector, and wrote a three-step repair plan; five cleared.", "hint": { "present": ["instance"] } },
+    { "say": "I started with the units that had tripped in the last 60 days, and ruled out anything under 5 years old.", "hint": { "present": ["instance", "mechanism"] } },
+    { "say": "The diagnosis and the fixes were mine; my supervisor only signed off the first parts order.", "hint": { "present": ["instance", "mechanism", "ownership"] } },
+    { "say": "I want to work on hospital plant rooms, and this role is that work on commercial sites.", "hint": { "present": ["motivation"] } },
+    { "say": "Diagnosing faults from scratch without a supervisor on site and owning the first visit.", "hint": { "present": ["motivation", "role_understanding"] } }
+  ],
+  "expect": {
+    "moves": ["intro", "ask_anchor", "restart_item", "probe_depth", "acknowledge_move_on", "probe_depth", "probe_depth", "acknowledge_move_on", "probe_depth", "wrap_up"],
+    "statuses": { "hard:0": "sufficient", "capabilities:0": "sufficient", "intent:0": "sufficient" },
+    "probes": { "hard:0": 1, "capabilities:0": 2, "intent:0": 1 },
+    "itemsReached": 3,
+    "endReason": "items_exhausted",
+    "restarts": { "hard:0": 1 }
+  }
+}

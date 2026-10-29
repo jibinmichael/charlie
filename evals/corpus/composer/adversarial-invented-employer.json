@@ -1,0 +1,22 @@
+{
+  "surface": "composer",
+  "label": "adversarial",
+  "note": "why_you invents an employer (Google) the source never mentions; enforcer must drop why_you, keep the grounded fit readout",
+  "source": "Maya Okonkwo. Product designer, 6 years. Built the onboarding redesign at Trellis. Helped ship mobile checkout at Paseo.",
+  "artifact": {
+    "fields": {
+      "why_you": "you led design at Google, which makes you a strong fit for this senior role.",
+      "flag": "comp is not stated.",
+      "resume_tips": ["lead with the Trellis onboarding redesign"],
+      "facts": [{ "k": "Remote", "v": "hybrid, NYC" }]
+    },
+    "cov": {
+      "thin": false,
+      "reason": "solid design overlap on systems work",
+      "topMove": "lead with Trellis",
+      "coverage": [{ "req": "design systems", "status": "met", "evidence": "Trellis design system" }]
+    }
+  },
+  "violations": [{ "claim": "led design at Google", "issue": "invented employer; source shows Trellis and Paseo, never Google" }],
+  "expectAllFitDropped": false
+}

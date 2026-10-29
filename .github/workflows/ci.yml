@@ -1,0 +1,98 @@
+# .github/workflows/ci.yml — CI: typecheck, lint, tests, build, the migration guard, and the web/ dashboard.
+name: CI
+
+# Every PR is machine-checked before merge; main is re-checked on every push (post-merge safety net).
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# A newer push to the same branch/PR cancels the older in-flight run (faster feedback, less waste).
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  typecheck:
+    name: typecheck (tsc --noEmit)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+
+  lint:
+    name: lint (ESLint)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+
+  test:
+    name: test (Vitest, incl. email snapshots)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  build:
+    name: build (next build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      # No secrets needed: the site's Supabase client initialises at runtime, not at build.
+      - run: npm run build
+
+  migration-guard:
+    name: migration-guard (no applied migration modified)
+    runs-on: ubuntu-latest
+    # A PR-only guard: it compares this branch against the branch it will merge into.
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so merge-base can be computed
+      - name: Fetch the PR base branch
+        run: git fetch --no-tags origin "${{ github.base_ref }}"
+      - name: Check that no applied migration was modified or deleted
+        run: bash scripts/check-migrations.sh "origin/${{ github.base_ref }}"
+
+  web:
+    name: web (dashboard — test, typecheck, lint, build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npx eslint
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_CHARLIE_API_BASE: https://api.example.com

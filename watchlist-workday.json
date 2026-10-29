@@ -1,0 +1,906 @@
+[
+  {
+    "company": "ABB",
+    "slug": "abb",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "external_career_page",
+    "segment": "workday"
+  },
+  {
+    "company": "Accenture",
+    "slug": "accenture",
+    "source": "workday",
+    "dc": "wd103",
+    "site": "AccentureCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Adobe",
+    "slug": "adobe",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "external_experienced",
+    "segment": "workday"
+  },
+  {
+    "company": "Airbus",
+    "slug": "ag",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Airbus",
+    "segment": "workday"
+  },
+  {
+    "company": "AllianceBernstein",
+    "slug": "abglobal",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "alliancebernsteincareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Allstate",
+    "slug": "allstate",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "allstate_careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Altera Digital Health",
+    "slug": "harriscomputer",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Altera",
+    "segment": "workday"
+  },
+  {
+    "company": "Amcor",
+    "slug": "amcor",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Amcor_External_Career_Site",
+    "segment": "workday"
+  },
+  {
+    "company": "Ameriprise Financial",
+    "slug": "ameriprise",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Ameriprise",
+    "segment": "workday"
+  },
+  {
+    "company": "Amgen",
+    "slug": "amgen",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Aptiv",
+    "slug": "aptiv",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "APTIV_CAREERS",
+    "segment": "workday"
+  },
+  {
+    "company": "AstraZeneca",
+    "slug": "astrazeneca",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "AtkinsRealis",
+    "slug": "slihrms",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Avantor",
+    "slug": "vwr",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "avantorJobs",
+    "segment": "workday"
+  },
+  {
+    "company": "Aviva",
+    "slug": "aviva",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "Barclays",
+    "slug": "barclays",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "External_Career_Site_Barclays",
+    "segment": "workday"
+  },
+  {
+    "company": "Baxter",
+    "slug": "baxter",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "baxter",
+    "segment": "workday"
+  },
+  {
+    "company": "BlackRock",
+    "slug": "blackrock",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "BlackRock_Professional",
+    "segment": "workday"
+  },
+  {
+    "company": "BMO",
+    "slug": "bmo",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "Brambles",
+    "slug": "brambles",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Brambles_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Bristol Myers Squibb",
+    "slug": "bristolmyerssquibb",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "BMS",
+    "segment": "workday"
+  },
+  {
+    "company": "Broadridge",
+    "slug": "broadridge",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Brookfield",
+    "slug": "brookfield",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "brookfieldproperties",
+    "segment": "workday"
+  },
+  {
+    "company": "BrowserStack",
+    "slug": "browserstack",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "Capita",
+    "slug": "capita",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "CapitaGlobal",
+    "segment": "workday"
+  },
+  {
+    "company": "Capital One",
+    "slug": "capitalone",
+    "source": "workday",
+    "dc": "wd12",
+    "site": "Capital_One",
+    "segment": "workday"
+  },
+  {
+    "company": "Carrier",
+    "slug": "carrier",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "jobs",
+    "segment": "workday"
+  },
+  {
+    "company": "Cenovus Energy",
+    "slug": "cenovus",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Centrica",
+    "slug": "centrica",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Centrica",
+    "segment": "workday"
+  },
+  {
+    "company": "Chipotle",
+    "slug": "chipotle",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "ChipotleCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "CIBC",
+    "slug": "cibc",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "search",
+    "segment": "workday"
+  },
+  {
+    "company": "Cigna",
+    "slug": "cigna",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "cignacareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Cisco",
+    "slug": "cisco",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Cisco_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Cochlear",
+    "slug": "cochlear",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Cochlear_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Commonwealth Bank",
+    "slug": "cba",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "CommBank_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "CSL",
+    "slug": "csl",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "CSL_External",
+    "segment": "workday"
+  },
+  {
+    "company": "Cushman & Wakefield",
+    "slug": "cw",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "CVS Health",
+    "slug": "cvshealth",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "CVS_Health_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Desjardins",
+    "slug": "desjardins",
+    "source": "workday",
+    "dc": "wd10",
+    "site": "Desjardins",
+    "segment": "workday"
+  },
+  {
+    "company": "Dexus",
+    "slug": "dexus",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "DexusCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Diageo",
+    "slug": "diageo",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Diageo_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "DXC Technology",
+    "slug": "dxctechnology",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "DXCJobs",
+    "segment": "workday"
+  },
+  {
+    "company": "Edwards Lifesciences",
+    "slug": "edwards",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "EdwardsCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Elevance Health",
+    "slug": "elevancehealth",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "ANT",
+    "segment": "workday"
+  },
+  {
+    "company": "Emerson",
+    "slug": "emerson",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Emerson_College_Staff",
+    "segment": "workday"
+  },
+  {
+    "company": "Enbridge",
+    "slug": "enbridge",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "enbridge_careers",
+    "segment": "workday"
+  },
+  {
+    "company": "F5",
+    "slug": "ffive",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "f5jobs",
+    "segment": "workday"
+  },
+  {
+    "company": "FedEx",
+    "slug": "fedex",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "FXE-LAC_External_Career_Site",
+    "segment": "workday"
+  },
+  {
+    "company": "FedEx",
+    "slug": "fedex",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "FXE-MEISA-External",
+    "segment": "workday"
+  },
+  {
+    "company": "First Advantage",
+    "slug": "firstadvantage",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "FirstAdvantage",
+    "segment": "workday"
+  },
+  {
+    "company": "Fresenius Medical Care",
+    "slug": "freseniusmedicalcare",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "fme",
+    "segment": "workday"
+  },
+  {
+    "company": "Gilead",
+    "slug": "gilead",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "gileadcareers",
+    "segment": "workday"
+  },
+  {
+    "company": "GSK",
+    "slug": "gsk",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "GSKCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Haleon",
+    "slug": "gsknch",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "GSKCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Harris Computer",
+    "slug": "harriscomputer",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "1",
+    "segment": "workday"
+  },
+  {
+    "company": "HP",
+    "slug": "hp",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "ExternalCareerSite",
+    "segment": "workday"
+  },
+  {
+    "company": "Humana",
+    "slug": "humana",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "CenterWell_External_Career_Site",
+    "segment": "workday"
+  },
+  {
+    "company": "Illumina",
+    "slug": "illumina",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "illumina-careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Ingram Micro",
+    "slug": "ingrammicro",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "IngramMicro",
+    "segment": "workday"
+  },
+  {
+    "company": "Intact Financial",
+    "slug": "intactfc",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "intactfc",
+    "segment": "workday"
+  },
+  {
+    "company": "Lendlease",
+    "slug": "lendlease",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "LendleaseCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "LexisNexis Risk Solutions",
+    "slug": "relx",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "RiskSolutions",
+    "segment": "workday"
+  },
+  {
+    "company": "Light & Wonder",
+    "slug": "lnw",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "LightWonderExternalCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Linxon",
+    "slug": "slihrms",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Linxon",
+    "segment": "workday"
+  },
+  {
+    "company": "Manulife",
+    "slug": "manulife",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "MFCJH_Jobs",
+    "segment": "workday"
+  },
+  {
+    "company": "Marvell",
+    "slug": "marvell",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "MarvellCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Mastercard",
+    "slug": "mastercard",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "CorporateCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Medline",
+    "slug": "medline",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Medline",
+    "segment": "workday"
+  },
+  {
+    "company": "Morgan Stanley",
+    "slug": "ms",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "Morgan Stanley",
+    "slug": "ms",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "private",
+    "segment": "workday"
+  },
+  {
+    "company": "Morningstar",
+    "slug": "morningstar",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Americas",
+    "segment": "workday"
+  },
+  {
+    "company": "Motorola Solutions",
+    "slug": "motorolasolutions",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "MUFG",
+    "slug": "mufgub",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "MUFG-Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Nasdaq",
+    "slug": "nasdaq",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "Global_External_Site",
+    "segment": "workday"
+  },
+  {
+    "company": "Novartis",
+    "slug": "novartis",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Novartis_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "NVIDIA",
+    "slug": "nvidia",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "NVIDIAExternalCareerSite",
+    "segment": "workday"
+  },
+  {
+    "company": "Prudential",
+    "slug": "prudential",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "prudential",
+    "segment": "workday"
+  },
+  {
+    "company": "R1 RCM",
+    "slug": "r1rcm",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "R1RCM",
+    "segment": "workday"
+  },
+  {
+    "company": "RBC",
+    "slug": "rbc",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "RBCEARLYTALENT1",
+    "segment": "workday"
+  },
+  {
+    "company": "Regal Rexnord",
+    "slug": "regalrexnord",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Regeneron",
+    "slug": "regeneron",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "RELX",
+    "slug": "relx",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "relx",
+    "segment": "workday"
+  },
+  {
+    "company": "Rockwell Automation",
+    "slug": "rockwellautomation",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "External_Rockwell_Automation",
+    "segment": "workday"
+  },
+  {
+    "company": "Rolls-Royce",
+    "slug": "rollsroyce",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "professional",
+    "segment": "workday"
+  },
+  {
+    "company": "RSM",
+    "slug": "rsm",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "RSMCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Salesforce",
+    "slug": "salesforce",
+    "source": "workday",
+    "dc": "wd12",
+    "site": "External_Career_Site",
+    "segment": "workday"
+  },
+  {
+    "company": "Sanofi",
+    "slug": "sanofi",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "SanofiCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Saputo",
+    "slug": "saputo",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Saputo_External_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Shell",
+    "slug": "shell",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "ShellCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "SiFive",
+    "slug": "sifive",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "sifivecareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Solenis",
+    "slug": "solenis",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "Solenis",
+    "segment": "workday"
+  },
+  {
+    "company": "Stryker",
+    "slug": "stryker",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "StrykerCareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Sun Life",
+    "slug": "sunlife",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Experienced",
+    "segment": "workday"
+  },
+  {
+    "company": "Suncor Energy",
+    "slug": "suncor",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "Suncor_External",
+    "segment": "workday"
+  },
+  {
+    "company": "Takeda",
+    "slug": "takeda",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "Target",
+    "slug": "target",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "targetcareers",
+    "segment": "workday"
+  },
+  {
+    "company": "TC Energy",
+    "slug": "tcenergy",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "CAREER_SITE_TC",
+    "segment": "workday"
+  },
+  {
+    "company": "TD Bank",
+    "slug": "td",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "TD_Bank_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "TD SYNNEX",
+    "slug": "synnex",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "tdsynnexcareers",
+    "segment": "workday"
+  },
+  {
+    "company": "Telstra",
+    "slug": "telstra",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Telstra_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "The Hartford",
+    "slug": "thehartford",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Careers_External",
+    "segment": "workday"
+  },
+  {
+    "company": "The Weir Group",
+    "slug": "weir",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Weir_External_Careers",
+    "segment": "workday"
+  },
+  {
+    "company": "Thomson Reuters",
+    "slug": "thomsonreuters",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "External_Career_Site",
+    "segment": "workday"
+  },
+  {
+    "company": "Transurban",
+    "slug": "transurban",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "broadbean_external",
+    "segment": "workday"
+  },
+  {
+    "company": "Travelers",
+    "slug": "travelers",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "Unilever",
+    "slug": "unilever",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Unilever_Experienced_Professionals",
+    "segment": "workday"
+  },
+  {
+    "company": "Unisys",
+    "slug": "unisys",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "UPS",
+    "slug": "hcmportal",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "Search",
+    "segment": "workday"
+  },
+  {
+    "company": "Valeo",
+    "slug": "valeo",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "valeo_jobs",
+    "segment": "workday"
+  },
+  {
+    "company": "Wells Fargo",
+    "slug": "wf",
+    "source": "workday",
+    "dc": "wd1",
+    "site": "wellsfargojobs",
+    "segment": "workday"
+  },
+  {
+    "company": "Wolters Kluwer",
+    "slug": "wk",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "External",
+    "segment": "workday"
+  },
+  {
+    "company": "Zentiva",
+    "slug": "zentiva",
+    "source": "workday",
+    "dc": "wd3",
+    "site": "Zentiva",
+    "segment": "workday"
+  },
+  {
+    "company": "Zoetis",
+    "slug": "zoetis",
+    "source": "workday",
+    "dc": "wd5",
+    "site": "broadbean_external",
+    "segment": "workday"
+  }
+]

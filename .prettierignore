@@ -1,0 +1,8 @@
+# generated / vendored — never format these
+lib/database.types.ts
+supabase/migrations/
+.next/
+node_modules/
+package-lock.json
+*.tsbuildinfo
+web/

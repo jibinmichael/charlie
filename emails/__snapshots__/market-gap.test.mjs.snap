@@ -1,0 +1,75 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderMarketGap — snapshot > share / never-matched / with research 1`] = `
+{
+  "html": "<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+<title>One thing keeps opening these doors</title>
+</head>
+<body style="margin:0;padding:0;background:#FFFFFF;font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2A2521;-webkit-font-smoothing:antialiased;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">One thing keeps opening the roles closest to you. Here's the door, and how to reach for it, together.</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FFFFFF;"><tbody><tr>
+    <td align="center" style="padding:30px 16px 50px;">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;"><tbody><tr>
+    <td align="center" style="padding:0 0 18px;">
+      <img src="https://example.com/charlie-hand.png" width="34" height="34" alt="Charlie" style="display:inline-block;">
+    </td>
+  </tr></tbody></table>
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#FFFFFF;border:1px solid #ECE9E3;border-radius:16px;"><tbody><tr>
+        <td style="padding:26px 24px;">
+          <p style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#00B67A;margin:0 0 10px;">on your side</p><h1 style="font-family:'Sanchez', Georgia, 'Times New Roman', serif;font-weight:400;font-size:23px;line-height:1.25;letter-spacing:-.01em;color:#2A2521;margin:0 0 14px;">One thing keeps opening these doors.</h1><p style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;line-height:1.62;color:#4A453E;margin:0 0 14px;">I've been reading the market for you every day, and I've found the one thing that would open the most doors.</p><p style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;line-height:1.62;color:#4A453E;margin:0 0 14px;">The roles you'd want most are built around product analytics. That makes it the single most valuable thing you could put in front of me.</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#F6F5F2;border-radius:12px;margin:16px 0;"><tbody><tr><td align="center" style="padding:20px 18px;">
+        <div style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7A7268;margin:0 0 14px;">where the doors are</div>
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tbody><tr>
+          <td width="108" height="108" align="center" valign="middle" style="width:108px;height:108px;background:#00B67A;background:conic-gradient(#00B67A 0 60%,#ECE9E3 60% 100%);border-radius:50%;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tbody><tr>
+              <td width="70" height="70" align="center" valign="middle" style="width:70px;height:70px;background:#FFFFFF;border-radius:50%;">
+                <span style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:20px;font-weight:600;color:#2A2521;">3/5</span>
+              </td>
+            </tr></tbody></table>
+          </td>
+        </tr></tbody></table>
+        <div style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;color:#2A2521;margin:14px 0 4px;">product analytics</div>
+        <div style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#7A7268;margin:0;">Shows up in 3 of the 5 roles closest to you</div>
+      </td></tr></tbody></table><div style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7A7268;margin:6px 0 8px;">what the market says</div>
+       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 14px;"><tbody><tr><td style="padding:0 0 8px;font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#4A453E;">senior PM postings increasingly require product analytics <a href="https://example.com/report" style="color:#7A7268;text-decoration:underline;">source</a></td></tr><tr><td style="padding:0 0 8px;font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#4A453E;">Market pay for Product managers (US) runs about $145,000 median. <a href="https://www.bls.gov/oes/x.htm" style="color:#7A7268;text-decoration:underline;">BLS</a></td></tr></tbody></table><p style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;line-height:1.62;color:#4A453E;margin:0 0 14px;">If product analytics is already part of your story, even a little, showing me opens this whole set of roles. And if it's something you're growing into, now you know exactly where to aim, and I'll be watching for it, with you.</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#E8F8F1;border-radius:12px;margin:18px 0 4px;"><tbody><tr><td style="padding:14px 16px;">
+      <div style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#00B67A;margin:0 0 5px;">one reply and it opens up</div>
+      <p style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#2A2521;margin:0;">Send me anything that shows it, a project, a story, a couple of lines, and I'll weave it into everything I look for from here.</p>
+    </td></tr></tbody></table>
+          <div style="margin:24px 0 0;border-top:1px solid #ECE9E3;padding:16px 0 0;">
+    <img src="https://example.com/charlie-hand.png" width="26" height="26" alt="Charlie" style="display:block;">
+    <p style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#7A7268;margin:6px 0 0;">Your personal career agent</p>
+  </div>
+        </td>
+      </tr></tbody></table>
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;"><tbody><tr>
+    <td style="text-align:center;padding:20px 0 0;">
+      <a href="https://test.charlie.local/unsubscribe?e=sam%40example.com&amp;t=c2FtQGV4YW1wbGUuY29t.-rS8Z1_VmLIjpng8o7p8x7Eg-gRi0Er5QYoiwaO-yk0" style="font-family:'Avenir Next',Avenir,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;color:#AAA298;text-decoration:underline;">Unsubscribe</a>
+    </td>
+  </tr></tbody></table>
+    </td>
+  </tr></tbody></table>
+</body>
+</html>",
+  "subject": "the one thing that keeps opening doors for you",
+  "text": "I've been reading the market for you every day, and I've found the one thing that would open the most doors.
+
+The roles you'd want most are built around product analytics. That makes it the single most valuable thing you could put in front of me.
+
+product analytics shows up in 3 of the 5 roles closest to you, that's where the doors are.
+
+- senior PM postings increasingly require product analytics (source: https://example.com/report)
+- Market pay for Product managers (US): about $145,000 median (BLS: https://www.bls.gov/oes/x.htm)
+
+If product analytics is already part of your story, even a little, showing me opens this whole set of roles. And if it's something you're growing into, now you know exactly where to aim, and I'll be watching for it, with you.
+
+Send me anything that shows it, a project, a story, a couple of lines, and I'll weave it into everything I look for from here.
+
+Charlie",
+}
+`;

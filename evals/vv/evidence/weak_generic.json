@@ -1,0 +1,25 @@
+{
+  "persona": "weak_generic",
+  "conversation_id": "9b1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b",
+  "turns": [
+    { "id": "bb000000-0000-4000-8000-000000000001", "seq": 1, "speaker": "agent", "text": "Tell me about the HVAC repair work you do in your current role.", "t_start": 20, "t_end": 24, "usable": true, "plan_item_id": "1a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": "ask_anchor" },
+    { "id": "bb000000-0000-4000-8000-000000000002", "seq": 2, "speaker": "candidate", "text": "I do a lot of repairs, I'm very hands-on and I love fixing things.", "t_start": 25, "t_end": 32, "stt_confidence": 0.9, "usable": true, "plan_item_id": "1a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": null },
+    { "id": "bb000000-0000-4000-8000-000000000003", "seq": 3, "speaker": "agent", "text": "What does that look like in a typical week?", "t_start": 33, "t_end": 35, "usable": true, "plan_item_id": "1a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": "probe_specifics" },
+    { "id": "bb000000-0000-4000-8000-000000000004", "seq": 4, "speaker": "candidate", "text": "For a while now. It's a big part of what I do, I'd say I'm quite experienced.", "t_start": 36, "t_end": 42, "stt_confidence": 0.9, "usable": true, "plan_item_id": "1a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": null },
+    { "id": "bb000000-0000-4000-8000-000000000005", "seq": 5, "speaker": "agent", "text": "Okay, thank you. On to the next one. Tell me about the last fault you traced from scratch and what came of it.", "t_start": 43, "t_end": 49, "usable": true, "plan_item_id": "2a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": "acknowledge_move_on" },
+    { "id": "bb000000-0000-4000-8000-000000000006", "seq": 6, "speaker": "candidate", "text": "I'm always tracing faults, it's second nature. I use all the usual tools.", "t_start": 50, "t_end": 56, "stt_confidence": 0.88, "usable": true, "plan_item_id": "2a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": null },
+    { "id": "bb000000-0000-4000-8000-000000000007", "seq": 7, "speaker": "agent", "text": "Could you give me one concrete example of that, with the details?", "t_start": 57, "t_end": 60, "usable": true, "plan_item_id": "2a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": "probe_specifics" },
+    { "id": "bb000000-0000-4000-8000-000000000008", "seq": 8, "speaker": "candidate", "text": "I'd check the equipment and talk to the right people, that's what I always do.", "t_start": 61, "t_end": 67, "stt_confidence": 0.3, "usable": true, "plan_item_id": "2a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b", "move": null }
+  ],
+  "extractor_output": {
+    "1a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b": { "items": [
+      { "contract_element": "context", "type": "claim", "quote": "I do a lot of repairs", "turn_seqs": [2], "specificity": 0, "ownership": "self", "typed_facts": [] },
+      { "contract_element": "dates", "type": "claim", "quote": "For a while now.", "turn_seqs": [4], "specificity": 0, "ownership": "unclear", "typed_facts": [] }
+    ] },
+    "2a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b": { "items": [
+      { "contract_element": "instance", "type": "claim", "quote": "I'm always tracing faults, it's second nature.", "turn_seqs": [6], "specificity": 0, "ownership": "self", "typed_facts": [] },
+      { "contract_element": "mechanism", "type": "claim", "quote": "I'd check the equipment and talk to the right people", "turn_seqs": [8], "specificity": 0, "ownership": "unclear", "typed_facts": [] }
+    ] }
+  },
+  "expect": { "hard:0": "stated_only", "capabilities:0": "stated_only" }
+}

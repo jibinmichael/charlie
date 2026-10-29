@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals", "prettier"],
+  "ignorePatterns": ["lib/database.types.ts", ".next/", "node_modules/"]
+}

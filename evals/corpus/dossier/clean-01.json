@@ -1,0 +1,22 @@
+{
+  "surface": "dossier",
+  "label": "clean",
+  "note": "a grounded dossier: every proof point traces to the resume; name is verbatim",
+  "expectName": "Maya Okonkwo",
+  "source": "Maya Okonkwo. Product designer, 6 years. Built the onboarding redesign at Trellis. Helped ship mobile checkout at Paseo. Skills: Figma, design systems, user research.",
+  "artifact": {
+    "name": "Maya Okonkwo",
+    "headline": "Product designer, 6 years, B2B SaaS",
+    "narrative": "Maya is a product designer who built the onboarding redesign at Trellis and helped ship mobile checkout at Paseo.",
+    "proof_points": [{ "claim": "built the onboarding redesign at Trellis", "evidence": "resume", "source": "resume" }],
+    "case_studies": [],
+    "strengths": ["design systems", "user research"],
+    "gaps": ["no people-management experience shown"],
+    "preferences": {
+      "role": "product designer", "seniority": null, "stage": null, "remote": null,
+      "comp_floor": null, "comp_currency": null, "tech": ["Figma"], "values": null,
+      "dealbreakers": null, "ping_bar": null
+    }
+  },
+  "violations": []
+}

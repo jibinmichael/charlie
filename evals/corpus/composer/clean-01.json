@@ -1,0 +1,25 @@
+{
+  "surface": "composer",
+  "label": "clean",
+  "note": "every claim traces to the source; nothing should drop",
+  "source": "Maya Okonkwo. Product designer, 6 years. Built the onboarding redesign at Trellis (a B2B SaaS). Helped ship the mobile checkout at Paseo. Skills: Figma, design systems, user research.",
+  "artifact": {
+    "fields": {
+      "why_you": "you built the onboarding redesign at Trellis, which is the kind of zero-to-one product design this role centers on.",
+      "flag": "they want someone who has managed designers; your background is individual-contributor.",
+      "cover_letter": "Hi team,\n\nI built the onboarding redesign at Trellis and helped ship mobile checkout at Paseo.\n\nMaya",
+      "resume_tips": ["lead with the Trellis onboarding redesign", "mention your design-systems work in Figma"],
+      "facts": [{ "k": "Comp", "v": "not stated" }, { "k": "Remote", "v": "hybrid, NYC" }]
+    },
+    "cov": {
+      "thin": false,
+      "reason": "strong overlap on design systems and zero-to-one product design",
+      "topMove": "lead with the onboarding redesign",
+      "coverage": [
+        { "req": "design systems", "status": "met", "evidence": "design systems at Trellis" },
+        { "req": "people management", "status": "gap", "evidence": "" }
+      ]
+    }
+  },
+  "violations": []
+}

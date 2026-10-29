@@ -1,0 +1,34 @@
+Charlie
+Copyright (c) the Charlie contributors.
+
+The source code in this repository is licensed under the MIT License (see LICENSE).
+The third-party material listed below is NOT covered by the MIT License. It keeps its
+own licence or remains the property of its owners.
+
+1. Fonts (SIL Open Font License 1.1; full text in public/fonts/OFL.txt)
+
+   - Courier Prime
+     Copyright 2015 The Courier Prime Project Authors (Quote-Unquote Apps),
+     https://github.com/quoteunquoteapps/CourierPrime
+     Files: public/fonts/courier-prime-400.woff2, public/fonts/courier-prime-700.woff2
+
+   - Sanchez
+     Copyright (c) 2012, LatinoType (www.latinotype.com), with Reserved Font Name
+     'Sanchez'. Designed by Daniel Hernández. (Read from the font's embedded name table.)
+     Embedded as base64 data, not as separate font files:
+       sanchez-font.mjs  (woff2, used in emails)
+       sanchez-ttf.mjs   (TTF, used in generated PDFs by resume-pdf.tsx)
+
+2. Logos and trademarks
+
+   The company and applicant-tracking-system logos under public/logos/ (including all
+   subfolders) are trademarks of their respective owners. They are included only to
+   identify those companies and services, do not imply endorsement, and are not licensed
+   under the MIT License. Remove or replace them if your use is not identification.
+
+3. Data lists
+
+   watchlist.json, watchlist-workday.json, watchlist-eightfold.json, seed-companies.json
+   and data/india-seed.json are lists of companies and their public job-board identifiers,
+   compiled from publicly available job boards. They contain no personal data. The
+   company names in them belong to their owners.

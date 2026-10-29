@@ -1,0 +1,24 @@
+# .vercelignore — what the SITE deploy must never upload.
+#
+# The Vercel project builds app/ (the marketing site) out of this same repo, which is also where the
+# engine runs locally. A local `engine:run` writes its working set (jobs.json can exceed 100 MB) to the
+# repo root, and Vercel rejects any file over 100 MB, so those artifacts must never be uploaded.
+#
+# These are all local engine artifacts. None of them is imported by app/, and none is needed to build
+# or serve the site.
+jobs.json
+jobs.json.*
+seen-jobs.json
+embeddings.json
+latest.json
+stats.json
+kpi.json
+*.stale-*.bak
+
+# scratch + local caches
+scripts/.fit-cache.json
+tsconfig.typecheck.tsbuildinfo
+
+# the engine + server themselves: the site never imports them, and shipping them to a CDN host is
+# both pointless weight and unnecessary surface.
+research/

@@ -1,0 +1,21 @@
+{
+  "name": "strong_specific",
+  "description": "Answers every anchor with a concrete instance and every probe with mechanism and ownership. Hints say the required elements are present.",
+  "turns": [
+    { "say": "Ready when you are." },
+    { "say": "At Acme I repair rooftop HVAC units for commercial sites across West Yorkshire. I've been there since March 2023, and I do about twelve call-outs a week, every one logged in the CMMS.", "hint": { "present": ["context", "dates", "specific_experience"] } },
+    { "say": "March 2023, and yes, repair work is still most of my week. Last quarter I closed 41 of my 46 call-outs on the first visit.", "hint": { "present": ["context", "dates", "specific_experience"] } },
+    { "say": "Last month I traced a recurring compressor trip across 6 rooftop units from scratch using the CMMS history and a leak detector, and wrote a three-step repair plan. It cleared five of the six.", "hint": { "present": ["instance"] } },
+    { "say": "I started with the units that had tripped in the last 60 days, because that pointed to a shared cause, and I ruled out anything under 5 years old because those were still under the maker's warranty.", "hint": { "present": ["instance", "mechanism"] } },
+    { "say": "The diagnosis and the repair plan were mine. My supervisor signed off the first parts order but the fault-finding and the fixes were my calls.", "hint": { "present": ["instance", "mechanism", "ownership"] } },
+    { "say": "I want to work on hospital plant rooms specifically, and this role is repair work on commercial sites on your own route, which is exactly what I have been doing.", "hint": { "present": ["motivation", "role_understanding"] } },
+    { "say": "Diagnosing faults from scratch, running my own route without a supervisor on site, and owning the first visit.", "hint": { "present": ["motivation", "role_understanding"] } }
+  ],
+  "expect": {
+    "moves": ["intro", "ask_anchor", "probe_depth", "acknowledge_move_on", "probe_depth", "probe_depth", "acknowledge_move_on", "probe_depth", "wrap_up"],
+    "statuses": { "hard:0": "sufficient", "capabilities:0": "sufficient", "intent:0": "sufficient" },
+    "probes": { "hard:0": 1, "capabilities:0": 2, "intent:0": 1 },
+    "itemsReached": 3,
+    "endReason": "items_exhausted"
+  }
+}

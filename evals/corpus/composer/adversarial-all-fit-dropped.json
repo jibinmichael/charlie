@@ -1,0 +1,20 @@
+{
+  "surface": "composer",
+  "label": "adversarial",
+  "note": "every fit surface repeats one invented scope+employer; with no grounded readout left, the enforcer must report allFitDropped so the caller sends the neutral fallback (never a fabricated email)",
+  "source": "Maya Okonkwo. Product designer at Trellis.",
+  "artifact": {
+    "fields": {
+      "why_you": "you scaled a 50-person design org at Meta.",
+      "facts": []
+    },
+    "cov": {
+      "thin": false,
+      "reason": "you scaled a 50-person design org at Meta",
+      "topMove": null,
+      "coverage": []
+    }
+  },
+  "violations": [{ "claim": "scaled a 50-person design org at Meta", "issue": "invented scope and employer" }],
+  "expectAllFitDropped": true
+}

@@ -1,0 +1,24 @@
+{
+  "name": "weak_generic",
+  "description": "Speaks in generalities. Hints say the core element is never present. The controller asks for specifics once, then a depth probe, then a scenario where the contract has one, then moves on.",
+  "turns": [
+    { "say": "Sure, let's go." },
+    { "say": "I do a lot of repairs, I'm very hands-on and I love fixing things.", "hint": { "present": [] } },
+    { "say": "For a while now. It's a big part of what I do, I'd say I'm quite experienced.", "hint": { "present": [] } },
+    { "say": "Honestly I just work hard and stay persistent, that's the secret.", "hint": { "present": [] } },
+    { "say": "I'm always tracing faults, it's second nature. I use all the usual tools.", "hint": { "present": [] } },
+    { "say": "I'd check the equipment and talk to the right people, that's what I always do.", "hint": { "present": [] } },
+    { "say": "I'd get stuck in and start on the backlog, you have to be proactive.", "hint": { "present": [] } },
+    { "say": "First two weeks I'd get to know the sites and start taking call-outs.", "hint": { "present": [] } },
+    { "say": "It seems like a great company and a great opportunity to grow.", "hint": { "present": [] } },
+    { "say": "I'm passionate about engineering and I think I'd be a great fit.", "hint": { "present": [] } },
+    { "say": "Fixing things, mostly, and working with the team.", "hint": { "present": [] } }
+  ],
+  "expect": {
+    "moves": ["intro", "ask_anchor", "probe_specifics", "probe_depth", "acknowledge_move_on", "probe_specifics", "probe_depth", "scenario", "acknowledge_move_on", "probe_specifics", "probe_depth", "wrap_up"],
+    "statuses": { "hard:0": "moved_on", "capabilities:0": "moved_on", "intent:0": "moved_on" },
+    "probes": { "hard:0": 2, "capabilities:0": 2, "intent:0": 2 },
+    "itemsReached": 3,
+    "endReason": "items_exhausted"
+  }
+}

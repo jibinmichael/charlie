@@ -1,0 +1,21 @@
+{
+  "//": "Dedicated typecheck gate: `npm run typecheck`. Covers the TS surface (app/, server/), which the",
+  "// ": "base tsconfig.json does not fully check (it excludes server/). The Supabase-touching .mjs files",
+  "//  ": "carry typed-client @type annotations (guardrails: invented tables/columns light up in-editor",
+  "//   ": "and at the app/actions.ts <Database> write path); they are intentionally NOT blanket-@ts-checked",
+  "//    ": "because jsonb columns generate as opaque `Json` and the tenant-isolation seam takes a runtime",
+  "//     ": "table name, so full checkJs there is 100+ non-schema errors, not real bugs. Runtime invented-",
+  "//      ": "data safety is enforced by the Zod schemas in lib/schemas/. Not used by `next build`.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "server/**/*.ts"
+  ],
+  "exclude": ["node_modules", ".next"]
+}

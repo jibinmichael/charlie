@@ -1,0 +1,58 @@
+{
+  "FORM05": {
+    "pool": "Would you like Charlie to consider you for other relevant roles in the future based on your profile and experience?",
+    "share": "I consent to being contacted by the Hooli HR / hiring team regarding this application and the recruitment process."
+  },
+  "FORM06": {
+    "pool": null,
+    "share": null
+  },
+  "FORM03": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM01": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM02": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM90": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM07": {
+    "pool": null,
+    "share": null
+  },
+  "FORM08": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM09": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM91": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM10": {
+    "pool": null,
+    "share": null
+  },
+  "FORM11": {
+    "pool": "Even if this role isn't the one, would you like to be part of Charlie's talent network?",
+    "share": null
+  },
+  "FORM12": {
+    "pool": "Would you like to join the Charlie talent pool?",
+    "share": "If shortlisted, may we share your Charlie profile with the employer?"
+  },
+  "FORM13": {
+    "pool": "Yes, Charlie may also send me roles from other companies it works with. (Optional - answering this has no bearing on how this application is assessed.)",
+    "share": null
+  }
+}

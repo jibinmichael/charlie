@@ -1,0 +1,138 @@
+[
+  {
+    "company": "Albemarle",
+    "slug": "albemarle",
+    "source": "eightfold",
+    "host": "albemarle.eightfold.ai",
+    "domain": "albemarle.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Bayer",
+    "slug": "bayer",
+    "source": "eightfold",
+    "host": "bayer.eightfold.ai",
+    "domain": "bayer.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Boston Consulting Group",
+    "slug": "bcg",
+    "source": "eightfold",
+    "host": "bcg.eightfold.ai",
+    "domain": "bcg.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "CoStar Group",
+    "slug": "costar",
+    "source": "eightfold",
+    "host": "costar.eightfold.ai",
+    "domain": "costar.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Coca-Cola FEMSA",
+    "slug": "coca-colafemsa",
+    "source": "eightfold",
+    "host": "coca-colafemsa.eightfold.ai",
+    "domain": "coca-colafemsa.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Faurecia",
+    "slug": "faurecia",
+    "source": "eightfold",
+    "host": "faurecia.eightfold.ai",
+    "domain": "faurecia.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "HSBC",
+    "slug": "hsbc",
+    "source": "eightfold",
+    "host": "hsbc.eightfold.ai",
+    "domain": "hsbc.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Insight Enterprises",
+    "slug": "insight",
+    "source": "eightfold",
+    "host": "insight.eightfold.ai",
+    "domain": "insight.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "LG CNS",
+    "slug": "lgcns",
+    "source": "eightfold",
+    "host": "lgcns.eightfold.ai",
+    "domain": "lgcns.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Liberty Mutual",
+    "slug": "libertymutual",
+    "source": "eightfold",
+    "host": "libertymutual.eightfold.ai",
+    "domain": "libertymutual.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "MLP",
+    "slug": "mlp",
+    "source": "eightfold",
+    "host": "mlp.eightfold.ai",
+    "domain": "mlp.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "MM Group",
+    "slug": "mm-group",
+    "source": "eightfold",
+    "host": "mm-group.eightfold.ai",
+    "domain": "mm-group.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "NetApp",
+    "slug": "netapp",
+    "source": "eightfold",
+    "host": "netapp.eightfold.ai",
+    "domain": "netapp.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Netflix",
+    "slug": "netflix",
+    "source": "eightfold",
+    "host": "netflix.eightfold.ai",
+    "domain": "netflix.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "STMicroelectronics",
+    "slug": "stmicroelectronics",
+    "source": "eightfold",
+    "host": "stmicroelectronics.eightfold.ai",
+    "domain": "stmicroelectronics.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Symetra",
+    "slug": "symetra",
+    "source": "eightfold",
+    "host": "symetra.eightfold.ai",
+    "domain": "symetra.com",
+    "segment": "eightfold"
+  },
+  {
+    "company": "Vale",
+    "slug": "vale",
+    "source": "eightfold",
+    "host": "vale.eightfold.ai",
+    "domain": "vale.com",
+    "segment": "eightfold"
+  }
+]

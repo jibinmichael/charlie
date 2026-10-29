@@ -1,0 +1,918 @@
+/* Global styles for the Charlie dashboard: Tailwind and shadcn setup, the design tokens (type, colour, radius,
+   motion), and the few shared classes components use (pills, tokens, highlights, links, count badges). */
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-agent: var(--agent);
+  /* the system's own face: San Francisco on a Mac, Segoe UI on Windows, Roboto on Android. No font file is loaded */
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* the two weights, a touch fuller than 400/500 so the system font reads clearly: regular 450 and medium 560. A variable system face (San Francisco) draws them exactly; a fixed one (Segoe UI) rounds to its
+     nearest weight */
+  --font-weight-normal: 450;
+  --font-weight-medium: 560;
+  /* one family: code and keys use it too */
+  --font-mono: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --text-display: 2.25rem;
+  --text-display--line-height: 1.2;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 600;
+
+  --text-h1: 1.5rem;
+  --text-h1--line-height: 1.3;
+  --text-h1--letter-spacing: -0.015em;
+  --text-h1--font-weight: 600;
+
+  --text-h2: 1.25rem;
+  --text-h2--line-height: 1.4;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h2--font-weight: 600;
+
+  --text-h3: 1rem;
+  --text-h3--line-height: 1.5;
+  --text-h3--letter-spacing: 0;
+  --text-h3--font-weight: 600;
+
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.65;
+  --text-body--letter-spacing: 0;
+  --text-body--font-weight: 400;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.6;
+  --text-body-sm--letter-spacing: 0;
+  --text-body-sm--font-weight: 400;
+
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+  --text-caption--letter-spacing: 0;
+  --text-caption--font-weight: 400;
+
+  --text-micro: 0.75rem;
+  --text-micro--line-height: 1.4;
+  --text-micro--letter-spacing: 0.005em;
+  --text-micro--font-weight: 500;
+
+  --radius-xs: 2px;
+  --radius-none: 0;
+
+  /* Status and agent-state tokens. A state maps onto a status colour, never onto a component. */
+  --color-status-success: var(--status-success);
+  --color-status-warning: var(--status-warning);
+  --color-status-error: var(--status-error);
+  --color-status-info: var(--status-info);
+  --color-status-success-soft: var(--status-success-soft);
+  --color-status-warning-soft: var(--status-warning-soft);
+  --color-status-error-soft: var(--status-error-soft);
+  --color-status-info-soft: var(--status-info-soft);
+  --color-state-ready: var(--state-ready);
+  --color-state-working: var(--state-working);
+  --color-state-waiting: var(--state-waiting);
+  --color-state-blocked: var(--state-blocked);
+  --color-state-paused: var(--state-paused);
+  --color-state-error: var(--state-error);
+  --color-state-completed: var(--state-completed);
+  --color-accent-brand: var(--accent-brand);
+  --color-accent-brand-soft: var(--accent-brand-soft);
+  --color-vibe-1: var(--vibe-1);
+  --color-vibe-2: var(--vibe-2);
+  --color-vibe-3: var(--vibe-3);
+  --color-vibe-4: var(--vibe-4);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #26273b;
+  /* The mark's purple: the one accent a control may carry (active send). */
+  --agent: #6a2be8;
+  --card: oklch(1 0 0);
+  --card-foreground: #26273b;
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: #ececef;
+  --muted-foreground: #4c4f6b;
+  --accent: #ececef;
+  --accent-foreground: #26273b;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e0e1ec;
+  --input: #e0e1ec;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Restrained status palette (~60% of typical chroma) */
+  --status-success: oklch(0.6 0.11 152);
+  --status-warning: oklch(0.7 0.11 75);
+  --status-error: oklch(0.58 0.15 25);
+  --status-info: oklch(0.58 0.1 262);
+  --status-success-soft: oklch(0.96 0.03 152);
+  --status-warning-soft: oklch(0.97 0.035 80);
+  --status-error-soft: oklch(0.96 0.03 25);
+  --status-info-soft: oklch(0.96 0.025 262);
+  --accent-brand: oklch(0.205 0 0);
+  --accent-brand-soft: oklch(0.97 0 0);
+
+  --state-ready: var(--muted-foreground);
+  --state-working: var(--status-info);
+  --state-waiting: var(--status-warning);
+  --state-blocked: var(--status-error);
+  --state-paused: var(--status-warning);
+  --state-error: var(--status-error);
+  --state-completed: var(--status-success);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  /* Vibrance: four gradient stops, used only for a few accents (the presence halo, the ready primary
+     button, the loading hairline, the live topic line during a call). Everything else stays neutral. */
+  --vibe-1: #7b68ee;
+  --vibe-2: #ff6ec7;
+  --vibe-3: #ffb955;
+  --vibe-4: #49ccf9;
+  --vibe-gradient: linear-gradient(
+    135deg,
+    var(--vibe-1),
+    var(--vibe-2) 45%,
+    var(--vibe-3) 75%,
+    var(--vibe-4)
+  );
+  /* Active Send: the same four stops lifted toward white, so the arrow stays dark and the button quiet. */
+  --vibe-gradient-soft: linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--vibe-1) 42%, white),
+    color-mix(in oklch, var(--vibe-2) 38%, white) 45%,
+    color-mix(in oklch, var(--vibe-3) 42%, white) 75%,
+    color-mix(in oklch, var(--vibe-4) 42%, white)
+  );
+  --vibe-halo: conic-gradient(
+    from 0deg,
+    var(--vibe-1),
+    var(--vibe-4),
+    var(--vibe-2),
+    var(--vibe-3),
+    var(--vibe-1)
+  );
+  /* The composer: hairline ring plus a soft lift at rest; a soft vibrant ring while focused. */
+  --shadow-composer: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.05);
+  --shadow-composer-focus:
+    0 0 0 1px rgba(123, 104, 238, 0.35), 0 0 0 4px rgba(123, 104, 238, 0.08),
+    0 12px 32px rgba(0, 0, 0, 0.06);
+
+  /* Motion tokens. Mirrored in lib/motion.ts */
+  --motion-fast: 120ms;
+  --motion-normal: 180ms;
+  --motion-slow: 260ms;
+  --ease-out: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+
+  --status-success: oklch(0.72 0.11 152);
+  --status-warning: oklch(0.78 0.11 75);
+  --status-error: oklch(0.7 0.14 25);
+  --status-info: oklch(0.72 0.1 262);
+  --status-success-soft: oklch(0.26 0.03 152);
+  --status-warning-soft: oklch(0.28 0.035 80);
+  --status-error-soft: oklch(0.27 0.03 25);
+  --status-info-soft: oklch(0.27 0.025 262);
+  --accent-brand: oklch(0.72 0.12 275);
+  --accent-brand-soft: oklch(0.27 0.04 275);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    /* Smoothed text with kerning and standard ligatures on. */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings:
+      "kern" 1,
+      "liga" 1,
+      "calt" 1;
+    font-kerning: normal;
+    font-synthesis: none;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight-normal);
+  }
+  /* page and panel titles stand out a little */
+  h1 {
+    font-weight: var(--font-weight-medium);
+  }
+  /* One family, everywhere: nothing the browser styles on its own (controls, code, kbd, pre,
+     samp) may fall back to a default face. */
+  button,
+  input,
+  select,
+  textarea,
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-sans);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* ── Accent classes: where the four-stop gradient may appear ───────── */
+
+/* Presence: the conic halo behind the mark, only while the system is working. */
+.halo {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: var(--vibe-halo);
+  filter: blur(2.5px);
+  opacity: 0.85;
+  animation: halo-spin 2.4s linear infinite;
+}
+@keyframes halo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The primary action when it is ready: the four stops lifted toward white, ink text. */
+.btn-vibe {
+  background: var(--vibe-gradient-soft);
+  color: var(--foreground);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+}
+.btn-vibe:hover {
+  filter: brightness(0.98);
+}
+
+/* The loading hairline: a gradient sweep, 1px, never a spinner. */
+.hairline-vibe {
+  background: var(--vibe-gradient);
+}
+@keyframes hairline-sweep {
+  from {
+    left: -34%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halo {
+    animation: none;
+  }
+}
+
+/* ── Light theme: a white canvas, quiet hairlines, and the palette components name ── */
+:root:not(.dark) {
+  --background: #ffffff;
+  --foreground: #1c1c18;
+  --card-foreground: #1c1c18;
+  --muted: #f4f4f2;
+  --accent: #f4f4f2;
+  --muted-foreground: #68685d;
+  /* every border very subtle; fields keep --input so a box still reads as a box */
+  --border: #eeeeea;
+  --input: #e3e3e2;
+  --canvas: #ffffff;
+  /* One ink at three strengths, one rule grey, one accent.
+     Chips are a pastel field, a darker ink of the same hue and a hairline of the hue between. */
+  --ink: #1c1c18;
+  --ink-2: #535347;
+  --faint: #9e9e96;
+  --border-strong: #d4d4cf;
+  /* No off-white anywhere: canvas and surfaces are pure white; a hover or a pressed
+     state is the one light grey (--hover), never a background. */
+  --surface: #ffffff;
+  --hover: #f6f6f5;
+  /* a link on hover: the teal the inbox already used for links */
+  --link: #447aaf;
+  /* The primary is lime with ink text, the same as the workspace's Run now.
+     --blue keeps its historical name so every caller follows; text on white uses --blue-ink, a dark lime
+     that reads (lime itself does not, on white). */
+  --blue: #ebf212;
+  --blue-hover: #faff5c;
+  --blue-soft: #feffd9;
+  --blue-ink: #5f6400;
+  /* Roundness, one scale: tokens, chips and controls are full, cards 10, sheets 12. */
+  --radius-token: 9999px;
+  --radius-chip: 9999px;
+  --radius-control: 9999px;
+  --radius-card: 10px;
+  --radius-sheet: 12px;
+  /* The working palette: Charlie's violet, the person's blue, and the meanings a status can
+     carry. Each has a deep ink, a soft field and a hairline, used together and nowhere else. */
+  --charlie: #603fab;
+  --charlie-soft: #f5f1fd;
+  --charlie-line: #e4dcf9;
+  --person: #2b5782;
+  --person-soft: #ecf3fe;
+  --person-line: #dae5fc;
+  --ok: #396039;
+  --ok-soft: #ebf4eb;
+  --ok-line: #d8e8da;
+  --warn: #884411;
+  --warn-soft: #f9f1ed;
+  --warn-line: #f3e2d3;
+  --stated: #2b5782;
+  --stated-soft: #ecf3fe;
+  --stated-line: #dae5fc;
+  --gap: #535347;
+  --gap-soft: #f4f4f2;
+  --gap-line: #efefeb;
+  --no: #9e3225;
+  --no-soft: #fff1ee;
+  --no-line: #fedbd7;
+  --select-soft: #f4f4f2;
+
+  /* ── Charlie's colour system ──
+     Lime is the brand; every other colour is a meaning, and every meaning is the same five parts: a light
+     container, the text made for it (on), an ink for text on white, a dot, and a hairline (Material 3's
+     container/on-container roles). Contrast, computed: on/container 8.2 to 9.7:1, ink on white 6.3:1 or more,
+     dots 3.2:1 or more. Components name these tokens, never a hex. The workspace (Inbox, Agents, dropdowns) uses
+     them; the older tokens above remain for the verification screens. */
+  --c-surface: #ffffff;
+  --c-hover: #f6f6f5;
+  --c-selected: #f6f2ef; /* where you are: a warm selected grey */
+  --c-line: #eeeeea; /* very subtle */
+  --c-outline: #c9c9c8;
+  --c-text: #1c1c18; /* 17:1, titles and headings */
+  --c-body: #424238; /* 10.1:1, body text: a step lighter than a title */
+  --c-text-2: #535347; /* 7.8:1, secondary text */
+  --c-muted: #68685d; /* 5.6:1, supporting text and placeholders */
+  --c-faint: #83837a; /* 3.8:1, disabled and dividers only, never text */
+  --c-link: #447aaf; /* the link, and only the link */
+
+  --c-brand: #ebf212; /* the primary, ink text 14:1; never text itself */
+  --c-brand-hover: #faff5c;
+  --c-brand-container: #feffd9;
+  --c-brand-on: #3d4100;
+  --c-brand-ink: #5f6400;
+  --c-brand-dot: #8a9100;
+  --c-brand-line: #e6ec8e;
+
+  --c-success-container: #ebf4eb;
+  --c-success-on: #274427;
+  --c-success-ink: #396039;
+  --c-success-dot: #4b814f;
+  --c-success-line: #d8e8da;
+
+  --c-info-container: #ecf3fe;
+  --c-info-on: #1d3d58;
+  --c-info-ink: #2b5782;
+  --c-info-dot: #447aaf;
+  --c-info-line: #dae5fc;
+
+  --c-progress-container: #f5f1fd;
+  --c-progress-on: #3f2b73;
+  --c-progress-ink: #603fab;
+  --c-progress-dot: #7f63c5;
+  --c-progress-line: #e4dcf9;
+
+  --c-attention-container: #f6f2ef; /* a person must act */
+  --c-attention-on: #493b2c;
+  --c-attention-ink: #66583d;
+  --c-attention-dot: #867250;
+  --c-attention-line: #e8e2d8;
+
+  --c-warning-container: #f9f1ed; /* something might be wrong */
+  --c-warning-on: #602f0c;
+  --c-warning-ink: #884411;
+  --c-warning-dot: #b16120;
+  --c-warning-line: #f3e2d3;
+
+  --c-error-container: #fff1ee;
+  --c-error-on: #6a2419;
+  --c-error-ink: #9e3225;
+  --c-error-dot: #d14532;
+  --c-error-line: #fedbd7;
+
+  --c-neutral-container: #efefeb;
+  --c-neutral-on: #434339;
+  --c-neutral-ink: #535347;
+  --c-neutral-dot: #83837a;
+  --c-neutral-line: #d4d4cf;
+}
+.dark {
+  --charlie: #b794f6;
+  --charlie-soft: oklch(0.25 0.06 300);
+  --person: #5eead4;
+  --person-soft: oklch(0.25 0.05 180);
+  --ok: #4ade80;
+  --ok-soft: oklch(0.25 0.06 150);
+  --warn: #fbbf24;
+  --warn-soft: oklch(0.27 0.06 80);
+  --stated: #a5b4fc;
+  --stated-soft: oklch(0.26 0.06 275);
+  --gap: #9ca3af;
+  --gap-soft: oklch(0.24 0 0);
+  --select-soft: oklch(0.24 0.04 300);
+}
+.dark {
+  --canvas: oklch(0.17 0 0);
+}
+.sheet {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.035),
+    0 2px 6px rgba(0, 0, 0, 0.03),
+    0 24px 60px -16px rgba(0, 0, 0, 0.1);
+}
+/* A quote carrying a highlight: the words sit on a pale wash, rounded, cloned across lines. */
+.hl {
+  background: var(--ok-soft);
+  box-shadow: inset 0 -1.5px 0 var(--ok);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 0;
+  padding: 1px 2px;
+}
+.hl-active {
+  background: var(--charlie-soft);
+  box-shadow: inset 0 -1.5px 0 var(--charlie);
+}
+
+/* Depth between columns: a hairline plus a soft edge, so the panes sit on different planes. */
+.col-depth-l {
+  box-shadow:
+    -1px 0 0 var(--border),
+    -4px 0 12px -10px rgba(20, 16, 40, 0.06);
+}
+/* Scroll without a visible bar. */
+.scroll-quiet {
+  scrollbar-width: none;
+}
+.scroll-quiet::-webkit-scrollbar {
+  display: none;
+}
+/* The live waveform strip: bars that move while Charlie speaks, dots otherwise. */
+.wave {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 14px;
+}
+.wave > i {
+  display: block;
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--muted-foreground);
+  opacity: 0.5;
+}
+.wave-on > i {
+  opacity: 0.9;
+  animation: wave-bar 0.9s ease-in-out infinite;
+}
+.wave-on > i:nth-child(3n) {
+  animation-delay: 0.15s;
+}
+.wave-on > i:nth-child(3n + 1) {
+  animation-delay: 0.3s;
+}
+.wave-on > i:nth-child(5n) {
+  animation-delay: 0.45s;
+}
+@keyframes wave-bar {
+  0%,
+  100% {
+    height: 2px;
+  }
+  50% {
+    height: 12px;
+  }
+}
+/* A hover card beside an annotation. */
+.hovercard {
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 2px 4px rgba(20, 16, 40, 0.06),
+    0 16px 40px -12px rgba(20, 16, 40, 0.28);
+}
+/* The floating control bar during a call: a pill at the foot of the canvas. */
+.dock {
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 8px 24px -12px rgba(20, 16, 40, 0.18);
+}
+/* Colour utilities for the palette above. */
+.ink-charlie {
+  color: var(--charlie);
+}
+.field-charlie {
+  background: var(--charlie-soft);
+  box-shadow: inset 0 0 0 1px var(--charlie-line);
+}
+.ink-ok {
+  color: var(--ok);
+}
+.field-ok {
+  background: var(--ok-soft);
+  box-shadow: inset 0 0 0 1px var(--ok-line);
+}
+.bar-ok {
+  background: #16a34a;
+}
+.ink-warn {
+  color: var(--warn);
+}
+.field-warn {
+  background: var(--warn-soft);
+  box-shadow: inset 0 0 0 1px var(--warn-line);
+}
+.bar-warn {
+  background: #f59e0b;
+}
+.ink-stated {
+  color: var(--stated);
+}
+.field-stated {
+  background: var(--stated-soft);
+  box-shadow: inset 0 0 0 1px var(--stated-line);
+}
+.bar-stated {
+  background: #3b82f6;
+}
+.ink-gap {
+  color: var(--gap);
+}
+.field-gap {
+  background: var(--gap-soft);
+  box-shadow: inset 0 0 0 1px var(--gap-line);
+}
+.bar-gap {
+  background: #d1d5db;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave-on > i {
+    animation: none;
+    height: 7px;
+  }
+}
+
+/* The one place the four-stop gradient shows during a call: the line naming what Charlie is exploring. */
+.text-vibe-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    var(--vibe-1),
+    var(--vibe-2),
+    var(--vibe-3),
+    var(--vibe-4),
+    var(--vibe-1)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (prefers-reduced-motion: reduce) {
+  .text-vibe-shimmer {
+    animation: none;
+  }
+}
+
+/* ── Controls: every control is the same bordered pill, one solid primary per band,
+   ghost icons where a border would be noise. ── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--ink-2);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--motion-fast) var(--ease-out),
+    border-color var(--motion-fast) var(--ease-out),
+    color var(--motion-fast) var(--ease-out);
+}
+.pill > svg {
+  /* icons inside a pill are 12px */
+  width: 12px;
+  height: 12px;
+  flex: none;
+  color: var(--ink-2);
+}
+.pill:hover {
+  background: var(--hover);
+}
+.pill-active {
+  background: var(--hover);
+  border-color: var(--border-strong);
+  color: var(--ink);
+}
+.pill-icon {
+  width: 28px;
+  padding: 0;
+  justify-content: center;
+}
+.pill-ghost {
+  border-color: transparent;
+}
+.pill-off,
+.pill:disabled {
+  color: var(--faint);
+  cursor: default;
+}
+.pill-off:hover,
+.pill:disabled:hover {
+  background: #ffffff;
+}
+.pill-off > svg,
+.pill:disabled > svg {
+  color: var(--faint);
+}
+.pill-primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #0f0e16;
+}
+.pill-primary > svg {
+  color: #0f0e16;
+}
+.pill-primary:hover {
+  background: var(--blue-hover);
+  border-color: var(--blue-hover);
+}
+.pill-sm {
+  height: 24px;
+  padding: 0 7px;
+  font-size: 12px;
+}
+.pill-sm > svg {
+  width: 13px;
+  height: 13px;
+}
+/* Links, one look everywhere: a text link (any a[href], and a text button marked .link) gets a
+   subtle 1px underline and the link colour on hover. A link shaped as a row, a nav item, an icon or a button
+   (data-link="block") keeps its own hover background instead. Unlayered on purpose, so a utility cannot undo it. */
+a[href]:not([data-link="block"]),
+.link {
+  cursor: pointer;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklch, currentColor 40%, transparent);
+  transition:
+    color var(--motion-fast) var(--ease-out),
+    text-decoration-color var(--motion-fast) var(--ease-out);
+}
+a[href]:not([data-link="block"]):hover,
+.link:hover {
+  color: var(--link);
+  text-decoration-line: underline;
+}
+/* The pointer on everything clickable; a disabled control keeps the arrow. In the base layer, so a deliberate
+   cursor (cursor-help on an evidence mark, a pill's own rule) still wins. */
+@layer base {
+  a[href],
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary,
+  select:not(:disabled),
+  label[for],
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    cursor: pointer;
+  }
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: default;
+  }
+}
+/* Every clickable thing has three states: hover, pressed, and a keyboard focus ring. */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+mark:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 1px #ffffff,
+    0 0 0 3px color-mix(in oklch, var(--blue) 45%, white);
+}
+.pill:focus-visible,
+.pill:focus-within {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--blue) 25%, white);
+}
+.pill:active {
+  background: var(--muted);
+  border-color: var(--border-strong);
+}
+.pill-ghost:hover {
+  background: var(--hover);
+}
+.pill-primary:active {
+  background: #d6dd3c;
+  border-color: #d6dd3c;
+}
+.pill-off:active,
+.pill:disabled:active {
+  background: #ffffff;
+  border-color: var(--border);
+}
+.hl:hover {
+  background: color-mix(in oklch, var(--ok-soft) 80%, var(--ok) 20%);
+}
+.hl-active:hover {
+  background: color-mix(in oklch, var(--charlie-soft) 80%, var(--charlie) 20%);
+}
+
+/* An inline token: a small grey pill set in the running
+   text, a Linear glyph and a short label, the detail on hover. Never a sentence, never prose. */
+.token {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 200px;
+  height: 18px;
+  margin: 0 2px 0 4px;
+  padding: 0 6px 0 5px;
+  border-radius: var(--radius-token);
+  background: var(--muted);
+  color: var(--ink-2);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 18px;
+  vertical-align: baseline;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--motion-fast) var(--ease-out);
+}
+.token > svg {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  color: var(--muted-foreground);
+}
+.token > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.token:hover {
+  background: var(--border);
+}
+.token-active {
+  background: var(--charlie-soft);
+  color: var(--charlie);
+}
+.token-active > svg {
+  color: var(--charlie);
+}
+.token-no {
+  background: var(--no-soft);
+  color: var(--no);
+}
+.token-no > svg {
+  color: var(--no);
+}
+
+/* Fully round: avatars, marks, icon buttons, dots, timeline nodes, radios, badges and logos are circles; chips,
+   tags, tabs and switches are pills. */
+.squircle {
+  /* fully round despite the name, which is kept so its users do not change */
+  border-radius: 9999px;
+}
+
+
+/* The type scale: page titles 15/24 regular; table cells, menu items, tabs and links 13/20 (the selected tab
+   medium); count badges Roboto Mono 12/16, this class alone (the one exception to the system font). */
+.count {
+  font-family: var(--font-count), ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+/* a table's column titles and the tabs that switch its view: Roboto Mono, smaller, uppercase */
+.label-mono {
+  font-family: var(--font-count), ui-monospace, monospace;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}

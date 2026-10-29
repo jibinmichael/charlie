@@ -1,0 +1,20 @@
+{
+  "surface": "composer",
+  "label": "adversarial",
+  "note": "a resume tip invents a metric (240%) not in the source; only that tip should drop",
+  "source": "Maya Okonkwo. Product designer. Built the onboarding redesign at Trellis.",
+  "artifact": {
+    "fields": {
+      "why_you": "you built the onboarding redesign at Trellis.",
+      "resume_tips": ["say the redesign increased signups by 240%", "mention your Figma work"],
+      "facts": [{ "k": "Stack", "v": "Figma" }]
+    },
+    "cov": {
+      "thin": false,
+      "reason": "design overlap",
+      "coverage": [{ "req": "figma", "status": "met", "evidence": "Figma" }]
+    }
+  },
+  "violations": [{ "claim": "increased signups by 240%", "issue": "invented metric not supported by the source" }],
+  "expectAllFitDropped": false
+}

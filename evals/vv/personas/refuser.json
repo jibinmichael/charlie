@@ -1,0 +1,17 @@
+{
+  "name": "refuser",
+  "description": "Declines every question. Every item ends declined, nothing is re-asked, and the session completes cleanly.",
+  "turns": [
+    { "say": "Okay, go ahead." },
+    { "say": "I'd rather not say." },
+    { "say": "Skip." },
+    { "say": "I don't want to answer that one." }
+  ],
+  "expect": {
+    "moves": ["intro", "ask_anchor", "handle_refusal", "handle_refusal", "wrap_up"],
+    "statuses": { "hard:0": "declined", "capabilities:0": "declined", "intent:0": "declined" },
+    "probes": { "hard:0": 0, "capabilities:0": 0, "intent:0": 0 },
+    "itemsReached": 3,
+    "endReason": "items_exhausted"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "5a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b",
+  "mandate_id": null,
+  "version": 1,
+  "status": "approved",
+  "session_budget_seconds": 600,
+  "consent_text_version": null,
+  "flagged": [],
+  "override_reason": null,
+  "approved_by": "tests@example.com",
+  "approved_at": "2026-09-22T00:00:00.000Z",
+  "items": [
+    {
+      "id": "1a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b",
+      "requirement_id": null,
+      "ref": "hard:0",
+      "kind": "hard_requirement",
+      "priority": 1,
+      "budget_seconds": 120,
+      "evidence_contract": {
+        "establishes": "Two or more years of commercial HVAC repair in the current role",
+        "mandate_quote": "Must have 2+ years repairing commercial HVAC in your current role",
+        "why_it_matters": "The mandate makes it a must-have: HVAC repair in the current role, not in the past.",
+        "elements": [
+          { "name": "context", "required": true, "core": true },
+          { "name": "dates", "required": true, "core": false },
+          { "name": "specific_experience", "required": false, "core": false }
+        ],
+        "anchor_question": "Tell me about the HVAC repair work you do in your current role.",
+        "depth_probes": [{ "text": "When did you start doing that, and is it still part of your week?", "targets": "dates" }],
+        "ownership_probe": null,
+        "scenario": null,
+        "contradiction_hooks": ["current employer", "start date"],
+        "expected_evidence": "A named employer, a start date at least two years back, and what repair work looks like now.",
+        "fallback_text": {
+          "anchor": "Could you tell me about the HVAC repair work in your current role?",
+          "probe": "What does that look like in a typical week?",
+          "move_on": "Okay, thank you. Let's move to the next one.",
+          "clarify": "Let me put that another way: what repair work do you do right now, and for whom?"
+        }
+      }
+    },
+    {
+      "id": "2a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b",
+      "requirement_id": null,
+      "ref": "capabilities:0",
+      "kind": "capability",
+      "priority": 2,
+      "budget_seconds": 240,
+      "evidence_contract": {
+        "establishes": "Diagnoses faults independently rather than following a dispatched checklist",
+        "mandate_quote": "diagnosing faults yourself on your own service route, not following a dispatched checklist",
+        "why_it_matters": "The mandate asks for independent fault-finding, not a dispatched checklist.",
+        "elements": [
+          { "name": "instance", "required": true, "core": true },
+          { "name": "mechanism", "required": true, "core": false },
+          { "name": "ownership", "required": true, "core": false },
+          { "name": "tradeoff", "required": false, "core": false }
+        ],
+        "anchor_question": "Tell me about the last fault you traced from scratch and what came of it.",
+        "depth_probes": [
+          { "text": "How did you decide where to start looking?", "targets": "mechanism" },
+          { "text": "Which parts of that were yours, and which came from someone else?", "targets": "ownership" }
+        ],
+        "ownership_probe": "Was the repair plan yours to make, or did you inherit it?",
+        "scenario": "Say you joined a company with no service history and no supervisor on site. What would you do in the first two weeks?",
+        "contradiction_hooks": ["tools used", "employer"],
+        "expected_evidence": "A named tool, a number, a decision they made about where to look, and their own role in it.",
+        "fallback_text": {
+          "anchor": "Could you walk me through the last fault you traced from scratch?",
+          "probe": "Could you give me one concrete example of that, with the details?",
+          "move_on": "Okay, thank you. On to the next one.",
+          "clarify": "Let me put that another way: when you last had to find a fault on your own, what did you actually do?"
+        }
+      }
+    },
+    {
+      "id": "3a1c2b3a-4d5e-4f60-8a7b-9c0d1e2f3a4b",
+      "requirement_id": null,
+      "ref": "intent:0",
+      "kind": "intent",
+      "priority": 3,
+      "budget_seconds": 120,
+      "evidence_contract": {
+        "establishes": "Why this role, in their own words, and what they understand about it",
+        "mandate_quote": "Field Service Technician",
+        "why_it_matters": "The mandate is for a role servicing hospital plant rooms on a commercial route.",
+        "elements": [
+          { "name": "motivation", "required": true, "core": true },
+          { "name": "role_understanding", "required": false, "core": false },
+          { "name": "availability", "required": false, "core": false }
+        ],
+        "anchor_question": "What drew you to this particular role?",
+        "depth_probes": [{ "text": "What do you understand the day to day of this role to be?", "targets": "role_understanding" }],
+        "ownership_probe": null,
+        "scenario": null,
+        "contradiction_hooks": [],
+        "expected_evidence": "A reason that references this role or company specifically, not a generic one.",
+        "fallback_text": {
+          "anchor": "Could you tell me what drew you to this role?",
+          "probe": "What about it, specifically, made you apply?",
+          "move_on": "Okay, thank you.",
+          "clarify": "Let me put that another way: of all the roles you could apply for, why this one?"
+        }
+      }
+    }
+  ]
+}

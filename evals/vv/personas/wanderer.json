@@ -1,0 +1,20 @@
+{
+  "name": "wanderer",
+  "description": "Answers a different question every time. Hints say the answer was off topic. One redirect per item, then the item is insufficient and the conversation moves on.",
+  "turns": [
+    { "say": "Yes, fine." },
+    { "say": "Well, the thing about my last company was the commute, it took an hour each way and the coffee was terrible.", "hint": { "present": [], "relevant": false } },
+    { "say": "And before that I was thinking of moving to Pune, my cousin lives there.", "hint": { "present": [], "relevant": false } },
+    { "say": "Faults remind me, my car has been making a noise, I need to get it looked at.", "hint": { "present": [], "relevant": false } },
+    { "say": "Speaking of which, do you know a good place for lunch near the office?", "hint": { "present": [], "relevant": false } },
+    { "say": "My uncle always said work is work, you know.", "hint": { "present": [], "relevant": false } },
+    { "say": "He also said never trust a man in brown shoes.", "hint": { "present": [], "relevant": false } }
+  ],
+  "expect": {
+    "moves": ["intro", "ask_anchor", "redirect", "acknowledge_move_on", "redirect", "acknowledge_move_on", "redirect", "wrap_up"],
+    "statuses": { "hard:0": "insufficient_irrelevant", "capabilities:0": "insufficient_irrelevant", "intent:0": "insufficient_irrelevant" },
+    "probes": { "hard:0": 0, "capabilities:0": 0, "intent:0": 0 },
+    "itemsReached": 3,
+    "endReason": "items_exhausted"
+  }
+}

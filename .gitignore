@@ -1,0 +1,42 @@
+node_modules/
+.next/
+.env*
+!.env.example
+.DS_Store
+tsconfig.typecheck.tsbuildinfo
+# local cohort snapshots hold personal data
+snapshots/
+
+# engine runtime output (written by scans / runs; rebuilt from source, never committed)
+job-pool/
+jobs.json
+jobs.json.*
+seen-jobs.json
+embeddings.json
+latest.json
+stats.json
+kpi.json
+feed.json
+matched-jobs.json
+pending-batch.json
+resolve-queue*.json
+scan-health.json
+market-gap-cache.json
+engine-build.json
+discovered.json
+composed-email.json
+watchlist-yc.json
+watchlist-india.json
+scheduler-test-jobs.json
+sample-email.html
+scripts/.fit-cache.json
+*.stale-*.bak
+*.bak
+*.log
+coverage/
+
+# local tooling
+.vercel/
+.claude/
+research/
+web/AGENTS.md
